@@ -94,21 +94,6 @@ class Header extends Component {
 
     return (
       <View onLayout={e => this.layoutChange(e.nativeEvent.layout)}>
-        <StatusBar
-          backgroundColor={
-            androidStatusBarColor
-              ? androidStatusBarColor
-              : variables.statusBarColor
-          }
-          barStyle={
-            iosBarStyle
-              ? iosBarStyle
-              : platformStyle === 'material'
-              ? 'light-content'
-              : variables.iosStatusbar
-          }
-          translucent={transparent ? true : translucent}
-        />
         {variables.isIphoneX ? (
           <View
             ref={c => (this._root = c)}
